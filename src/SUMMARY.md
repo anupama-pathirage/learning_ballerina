@@ -2,7 +2,7 @@
 
 [Introduction](index.md)
 
-- [Hello World](hello.md)
+- [Hello World](hello_world.md)
 
 - [Type System](type_system.md)
     - [Type System Fundamentals](type_system/type_system_fundamentals.md)
