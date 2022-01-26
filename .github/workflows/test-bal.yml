@@ -26,20 +26,3 @@ jobs:
     - name: Run Tests
       run: |
         bash ./code/test.sh
-
-    # - name: test changelog
-    #   uses: mkungla/actions-set-text-output@v1
-    #   id: file-out
-    #   with:
-    #       text: $(cat code/float.bash)
-    # - run: echo "${{ steps.file-out.outputs.value }}"
-    
-    # - name: test changelog2
-    #   uses: mkungla/actions-set-text-output@v1
-    #   id: program-out
-    #   with:
-    #       text: $(bal run code/float.bal)
-    # - run: echo "${{ steps.program-out.outputs.value }}"
-    # - name: Test result
-    #   if: ${{ steps.file-out.outputs.value }} != ${{ steps.program-out.outputs.value }}
-    #   run: echo "INCORRECT"

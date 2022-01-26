@@ -10,6 +10,7 @@ Let’s begin learning Ballerina.
 
 - [Hello World](hello.md) - A traditional Hello World program.
 - [Type System](type_system.md) - An introduction to Ballerina type system.
+    - [Type System Fundamentals](type_system/type_system_fundamentals.md)
     - [Values and Types](type_system/values_and_types.md)
     - [LangLib Modules](type_system/langlib.md)
 
