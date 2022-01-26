@@ -10,15 +10,15 @@ Let's write our first program using Ballerina. Use `bal run <file_name>` to run 
 
 <a href="https://play.ballerina.io/?gist=a0c991ef252351ff9b5170d5a31bade3&file=lb_hello_world.bal" target="_blank">Run in Playground   </a>
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./../../code/hello_world.bal) -->
-<!-- The below code snippet is automatically added from ./../../code/hello_world.bal -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./../code/hello_world.bal) -->
+<!-- The below code snippet is automatically added from ./../code/hello_world.bal -->
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 #### Output
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./../../code/hello_world.bash) -->
-<!-- The below code snippet is automatically added from ./../../code/hello_world.bash -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./../code/hello_world.bash) -->
+<!-- The below code snippet is automatically added from ./../code/hello_world.bash -->
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## Service
