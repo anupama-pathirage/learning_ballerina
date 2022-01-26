@@ -27,8 +27,8 @@ The network constructs in the language make it easy to develop network interacti
 
 #### Sample
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./../../code/hello_world_service.bal) -->
-<!-- The below code snippet is automatically added from ./../../code/hello_world_service.bal -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./../code/hello_world_service.bal) -->
+<!-- The below code snippet is automatically added from ./../code/hello_world_service.bal -->
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 Once the above service is started, invoke the service using the `cURL` command below using another terminal.
