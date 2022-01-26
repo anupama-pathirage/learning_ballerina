@@ -153,17 +153,42 @@
 <h4 id="sample"><a class="header" href="#sample">Sample</a></h4>
 <p><a href="https://play.ballerina.io/?gist=a0c991ef252351ff9b5170d5a31bade3&file=lb_hello_world.bal" target="_blank">Run in Playground   </a></p>
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./../code/hello_world.bal) -->
+<!-- The below code snippet is automatically added from ./../code/hello_world.bal -->
+<pre><code class="language-bal">//Binds prefix `io` to `ballerina/io` module. 
+import ballerina/io;
+
+//The main function is the program entry point.
+public function main() {
+    // Print text to the console using `io` module `println` function. 
+    io:println(&quot;Hello World&quot;);
+}
+</code></pre>
 <!-- The below code snippet is automatically added from ./code/hello_world.bal -->
 <!-- MARKDOWN-AUTO-DOCS:END -->
 <h4 id="output"><a class="header" href="#output">Output</a></h4>
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./../code/hello_world.bash) -->
+<!-- The below code snippet is automatically added from ./../code/hello_world.bash -->
+<pre><code class="language-bash">Hello World
+</code></pre>
 <!-- The below code snippet is automatically added from ./code/hello_world.bash -->
 <!-- MARKDOWN-AUTO-DOCS:END -->
 <h2 id="service"><a class="header" href="#service">Service</a></h2>
 <p>The network constructs in the language make it easy to develop network interactions easily. A simple <code>HTTP</code> service is as follows. </p>
 <h4 id="sample-1"><a class="header" href="#sample-1">Sample</a></h4>
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./../../code/hello_world_service.bal) -->
-<!-- The below code snippet is automatically added from ./../../code/hello_world_service.bal -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./../code/hello_world_service.bal) -->
+<!-- The below code snippet is automatically added from ./../code/hello_world_service.bal -->
+<pre><code class="language-bal">import ballerina/http;
+
+service / on new http:Listener(9090) {
+
+    // Handles HTTP GET requests.
+    resource function get hello() returns string {
+        return &quot;Hello World!&quot;;
+    }
+
+}
+</code></pre>
+<!-- The below code snippet is automatically added from ./../code/hello_world_service.bal -->
 <!-- MARKDOWN-AUTO-DOCS:END -->
 <p>Once the above service is started, invoke the service using the <code>cURL</code> command below using another terminal.</p>
 <pre><code class="language-bash">curl http://localhost:9090/hello
