@@ -2,6 +2,7 @@
 
 [Introduction](index.md)
 
+- [Introduction to Ballerina](introduction.md)
 - [Hello World](hello_world.md)
 
 - [Type System](type_system.md)
