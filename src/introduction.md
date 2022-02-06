@@ -12,8 +12,8 @@
 
 ## What are the unique features of Ballerina? 
 
-- Data-oriented - Ballerina makes it easy for the user to transfer, declare, manipulate, process and query the data.
-- Network oriented - Ballerina has language constructs/concepts which capture network primitives. (E.g., type system concepts to easily bind data coming via network to language types, service types, client types, etc.)
-- Graphical representation - Can easily explain network interactions via sequence diagrams. Each program has both a textual syntax and an equivalent graphical form based on sequence diagrams
-- Enterprise-grade application development - Built-in concurrency, Explicit error handling, transactions,  full life cycle management concepts including testing, documenting, configurability, dependency management & versioning
-- Cloud-Native - Reduces the gap between development to deployment and makes it easier for the developer to write the application and instruct how it should be deployed in the cloud.
+- **Data-oriented** - Ballerina makes it easy for the user to transfer, declare, manipulate, process and query the data.
+- **Network oriented** - Ballerina has language constructs/concepts which capture network primitives. (E.g., type system concepts to easily bind data coming via network to language types, service types, client types, etc.)
+- **Graphical representation** - Can easily explain network interactions via sequence diagrams. Each program has both a textual syntax and an equivalent graphical form based on sequence diagrams
+- **Enterprise-grade application development** - Built-in concurrency, Explicit error handling, transactions,  full life cycle management concepts including testing, documenting, configurability, dependency management & versioning
+- **Cloud-Native** - Reduces the gap between development to deployment and makes it easier for the developer to write the application and instruct how it should be deployed in the cloud.

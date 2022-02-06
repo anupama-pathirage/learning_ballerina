@@ -1,6 +1,6 @@
 # Type System Fundamentals
 
-**Ballerina is a statically typed language**
+**Ballerina is a statically typed language.**
 
 That means that every variable has a type that is known at compile time.
 
@@ -10,8 +10,8 @@ A static type checker uses either the names or the structure of the types in ord
 
 **Ballerina has semantic subtyping**. 
 
-The syntax - describes which strings of of characters comprise a valid program. i.e., the form of the language
-The semantics - describes what syntactically valid programs mean, what they do. i.e. the meaning of the language 
+The syntax - describes which strings of of characters comprise a valid program. i.e., the form of the language.
+The semantics - describes what syntactically valid programs mean, what they do. i.e. the meaning of the language.
 
 Semantic subtyping is an approach for defining subtyping relation based on set-theoretic models, rather than syntactic rules.
 
