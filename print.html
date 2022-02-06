@@ -253,11 +253,11 @@
 </ul>
 <h2 id="what-are-the-unique-features-of-ballerina"><a class="header" href="#what-are-the-unique-features-of-ballerina">What are the unique features of Ballerina?</a></h2>
 <ul>
-<li>Data-oriented - Ballerina makes it easy for the user to transfer, declare, manipulate, process and query the data.</li>
-<li>Network oriented - Ballerina has language constructs/concepts which capture network primitives. (E.g., type system concepts to easily bind data coming via network to language types, service types, client types, etc.)</li>
-<li>Graphical representation - Can easily explain network interactions via sequence diagrams. Each program has both a textual syntax and an equivalent graphical form based on sequence diagrams</li>
-<li>Enterprise-grade application development - Built-in concurrency, Explicit error handling, transactions,  full life cycle management concepts including testing, documenting, configurability, dependency management &amp; versioning</li>
-<li>Cloud-Native - Reduces the gap between development to deployment and makes it easier for the developer to write the application and instruct how it should be deployed in the cloud.</li>
+<li><strong>Data-oriented</strong> - Ballerina makes it easy for the user to transfer, declare, manipulate, process and query the data.</li>
+<li><strong>Network oriented</strong> - Ballerina has language constructs/concepts which capture network primitives. (E.g., type system concepts to easily bind data coming via network to language types, service types, client types, etc.)</li>
+<li><strong>Graphical representation</strong> - Can easily explain network interactions via sequence diagrams. Each program has both a textual syntax and an equivalent graphical form based on sequence diagrams</li>
+<li><strong>Enterprise-grade application development</strong> - Built-in concurrency, Explicit error handling, transactions,  full life cycle management concepts including testing, documenting, configurability, dependency management &amp; versioning</li>
+<li><strong>Cloud-Native</strong> - Reduces the gap between development to deployment and makes it easier for the developer to write the application and instruct how it should be deployed in the cloud.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="hello-world"><a class="header" href="#hello-world">Hello World</a></h1>
 <h2 id="main-program"><a class="header" href="#main-program">Main Program</a></h2>
@@ -317,13 +317,13 @@ service / on new http:Listener(9090) {
 <li><a href="type_system/langlib.html">LangLib Modules</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="type-system-fundamentals"><a class="header" href="#type-system-fundamentals">Type System Fundamentals</a></h1>
-<p><strong>Ballerina is a statically typed language</strong></p>
+<p><strong>Ballerina is a statically typed language.</strong></p>
 <p>That means that every variable has a type that is known at compile time.</p>
 <p><strong>Ballerina has structural type system.</strong> </p>
 <p>A static type checker uses either the names or the structure of the types in order to compare them against other types. Checking against the name is nominal typing and checking against the structure is structural typing. So in Ballerina, type compatibility is identified by considering the structure of the value rather than just relying on the name of the type.</p>
 <p><strong>Ballerina has semantic subtyping</strong>. </p>
-<p>The syntax - describes which strings of of characters comprise a valid program. i.e., the form of the language
-The semantics - describes what syntactically valid programs mean, what they do. i.e. the meaning of the language </p>
+<p>The syntax - describes which strings of of characters comprise a valid program. i.e., the form of the language.
+The semantics - describes what syntactically valid programs mean, what they do. i.e. the meaning of the language.</p>
 <p>Semantic subtyping is an approach for defining subtyping relation based on set-theoretic models, rather than syntactic rules.</p>
 <p>Type is a set of values. When is an assignment, <code>x = y</code> legal? </p>
 <p>There are at least two possible answers:</p>
