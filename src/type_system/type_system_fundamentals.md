@@ -6,11 +6,16 @@ That means that every variable has a type that is known at compile time.
 
 **Ballerina has structural type system.** 
 
-A static type checker uses either the names or the structure of the types in order to compare them against other types. Checking against the name is nominal typing and checking against the structure is structural typing. So in Ballerina, type compatibility is identified by considering the structure of the value rather than just relying on the name of the type.
+A static type checker uses either the names or the structure of the types in order to compare them against other types. Checking against the name is nominal typing and checking against the structure is structural typing. 
+
+So in Ballerina, type compatibility is identified by considering the structure of the value rather than just relying on the name of the type.
+
+All mainstream object-oriented languages use nominal subtyping. For ex: Java  has no structural subtyping at all; all subtype relationships must be explicitly declared. 
 
 **Ballerina has semantic subtyping**. 
 
-The syntax - describes which strings of of characters comprise a valid program. i.e., the form of the language.
+The syntax - describes which strings of of characters comprise a valid program. i.e., the form of the language. 
+
 The semantics - describes what syntactically valid programs mean, what they do. i.e. the meaning of the language.
 
 Semantic subtyping is an approach for defining subtyping relation based on set-theoretic models, rather than syntactic rules.
@@ -30,6 +35,8 @@ There are at least two possible answers:
     - There are two main approaches for defining the subtyping relation: 
         - syntactic approach - it is defined by means of a formal system of deduction rules
         - semantic approach - It is defined based on set theories. The subtyping relation is defined as inclusion of sets denoting types. Ballerina is using this approach. 
+
+Semantic subtyping is most useful for expressing types of tree-structured data, such as JSON.
 
 **Ballerina has network aware type system.** 
 

@@ -5,6 +5,13 @@
 - Ballerina is a general-purpose, open-source programming language.
 - It specializes in solving integration/API integration/network interactions & cloud-based problems by providing the right level of language abstractions and tools.
 - Ballerina is NOT a JVM language.
+- Ballerina is a programming language which is 
+    - compiled : (Compiled languages are converted directly into machine code that the processor can execute. C, C++, Rust, Go are examples. In interpreted Languages, interpreters run through a program line by line and execute each command. PHP, Ruby, Python are examples.    )
+    - type safe :
+    - concurrent :
+- Ballerina is neither an object oriented language nor a functional one.
+    - While the language has objects, the development methods are not completely OOP-based.
+    - Both objects and functions are first class concepts, giving developers the ability to choose the best option based on their requirements.   
 - It has two implementations.
     - jBallerina - written in java to run on top of JVM. This is the first implementation to prove the language. 
     - nBallerina - Compiled using LLVM, directly to the platform architecture. 
