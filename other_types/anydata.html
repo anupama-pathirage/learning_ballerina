@@ -160,17 +160,13 @@
 <li>The equality operation also takes care of cycles within anydata structure values.</li>
 </ul>
 <h4 id="sample"><a class="header" href="#sample">Sample</a></h4>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>import ballerina/io;
+<pre><code class="language-bal">import ballerina/io;
 public function main() {
     anydata[] fArr = [1.34, 3.43];
     float f = &lt;float&gt;fArr[0];
     io:println(f);
 }
-<span class="boring">}
-</span></code></pre></pre>
+</code></pre>
 <h4 id="output"><a class="header" href="#output">Output</a></h4>
 <pre><code>1.34
 </code></pre>
