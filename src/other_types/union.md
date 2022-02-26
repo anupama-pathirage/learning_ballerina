@@ -11,14 +11,14 @@
 
 #### Sample
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./../../code/boolean.bal) -->
-<!-- The below code snippet is automatically added from ./../../code/boolean.bal -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./../../code/union.bal) -->
+<!-- The below code snippet is automatically added from ./../../code/union.bal -->
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 #### Output
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./../../code/boolean.bash) -->
-<!-- The below code snippet is automatically added from ./../../code/boolean.bash -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./../../code/union.bash) -->
+<!-- The below code snippet is automatically added from ./../../code/union.bash -->
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
