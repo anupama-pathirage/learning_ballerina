@@ -150,10 +150,12 @@
 <p><strong>Ballerina is a statically typed language.</strong></p>
 <p>That means that every variable has a type that is known at compile time.</p>
 <p><strong>Ballerina has structural type system.</strong> </p>
-<p>A static type checker uses either the names or the structure of the types in order to compare them against other types. Checking against the name is nominal typing and checking against the structure is structural typing. So in Ballerina, type compatibility is identified by considering the structure of the value rather than just relying on the name of the type.</p>
+<p>A static type checker uses either the names or the structure of the types in order to compare them against other types. Checking against the name is nominal typing and checking against the structure is structural typing. </p>
+<p>So in Ballerina, type compatibility is identified by considering the structure of the value rather than just relying on the name of the type.</p>
+<p>All mainstream object-oriented languages use nominal subtyping. For ex: Java  has no structural subtyping at all; all subtype relationships must be explicitly declared. </p>
 <p><strong>Ballerina has semantic subtyping</strong>. </p>
-<p>The syntax - describes which strings of of characters comprise a valid program. i.e., the form of the language.
-The semantics - describes what syntactically valid programs mean, what they do. i.e. the meaning of the language.</p>
+<p>The syntax - describes which strings of of characters comprise a valid program. i.e., the form of the language. </p>
+<p>The semantics - describes what syntactically valid programs mean, what they do. i.e. the meaning of the language.</p>
 <p>Semantic subtyping is an approach for defining subtyping relation based on set-theoretic models, rather than syntactic rules.</p>
 <p>Type is a set of values. When is an assignment, <code>x = y</code> legal? </p>
 <p>There are at least two possible answers:</p>
@@ -176,6 +178,7 @@ The semantics - describes what syntactically valid programs mean, what they do. 
 </ul>
 </li>
 </ol>
+<p>Semantic subtyping is most useful for expressing types of tree-structured data, such as JSON.</p>
 <p><strong>Ballerina has network aware type system.</strong> </p>
 <p>Ballerina’s type system is specifically focused on aiding the development of networked and distributed applications. It has constructs that seamlessly map to network programming concepts such as services and network resources.</p>
 
