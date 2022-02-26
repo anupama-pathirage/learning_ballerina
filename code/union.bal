@@ -10,7 +10,7 @@ type Address record {
 type Location Address|string|int;
 
 public function main() {
-    int|string|float u1 = "this is a string";]
+    int|string|float u1 = "this is a string";
     if u1 is int {
         io:println("union contains a int  value");
     } else if u1 is float {
