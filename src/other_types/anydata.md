@@ -13,7 +13,7 @@
 
 #### Sample
 
-```rust
+```bal
 import ballerina/io;
 public function main() {
     anydata[] fArr = [1.34, 3.43];
