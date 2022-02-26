@@ -1344,17 +1344,17 @@ public function main() {
 <li>A union type describes a value that can be one of several types.</li>
 <li>Why union types?
 <ul>
-<li>Union is useful when the program expects a value to be either a many   different types.  e.g., : A  parameter  to the function or  return value  can be either  <code>int</code> or <code>float</code> etc.</li>
+<li>Union is useful when the program expects a value to be either many different types. e.g., A  parameter to the function or return value can be either  <code>int</code> or <code>float</code> etc.</li>
 <li>In traditional object-oriented code, we have to abstract over the two types by creating a hierarchy of types to achieve this.</li>
 </ul>
 </li>
-<li><code>T1|T2|T3</code> represent a union of the  sets  <code>T1</code>, <code>T2</code> and <code>T3</code>. 
+<li><code>T1|T2|T3</code> represents a union of the sets  <code>T1</code>, <code>T2</code> and <code>T3</code>. 
 <ul>
 <li>e.g., The type <code>int|float|string</code> can hold either <code>int</code>, <code>float</code> or <code>string</code>.</li>
 </ul>
 </li>
-<li>The  <code>is</code> operator is  used to check whether the value  belongs to a specific type.   The type will be narrowed  with the use of <code>is</code> operator. Narrowing occurs when Ballerina can deduce a more specific type for a value based on the structure of the code.</li>
-<li><code>T1|()</code> can be written as <code>T?</code> as  well.</li>
+<li>The  <code>is</code> operator is used to check whether the value belongs to a specific type.   The type will be narrowed with the use of the <code>is</code> operator. Narrowing occurs when Ballerina can deduce a more specific type for a value based on the structure of the code.</li>
+<li><code>T1|()</code> can be written as <code>T?</code> as well.</li>
 </ul>
 <h4 id="sample-19"><a class="header" href="#sample-19">Sample</a></h4>
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./../../code/union.bal) -->
