@@ -2,7 +2,7 @@
 
 #### Why Objects?
 
--  Object encapsulates data with functions that operate on the data
+-  Object encapsulates data with functions that operate on the data.
 
 #### Introduction
 - An object consists of named members, 
