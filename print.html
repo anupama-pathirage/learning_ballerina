@@ -1269,7 +1269,55 @@ public function main() {
 </ul>
 </li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="error"><a class="header" href="#error">error</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="object"><a class="header" href="#object">Object</a></h1>
+<h4 id="why-objects"><a class="header" href="#why-objects">Why Objects?</a></h4>
+<ul>
+<li>Object encapsulates data with functions that operate on the data</li>
+</ul>
+<h4 id="introduction"><a class="header" href="#introduction">Introduction</a></h4>
+<ul>
+<li>An object consists of named members, 
+<ul>
+<li>field -  stores a value</li>
+<li>method - a function that can be invoked on the object</li>
+</ul>
+</li>
+<li>When a method is invoked on an object, the function can access the object using the <code>self</code> variable.</li>
+<li>It is not possible for an object to have a field and a method with the same name.</li>
+<li>Need to use the <code>new</code> operator with a <code>class</code> to get an object. </li>
+<li>There are three visibility levels.
+<ul>
+<li>private - only visible within the object and its functions.</li>
+<li>public - visible to any module.</li>
+<li>protected - visible only within the same module.</li>
+</ul>
+</li>
+</ul>
+<h4 id="init-function"><a class="header" href="#init-function">Init Function</a></h4>
+<ul>
+<li>The <code>init</code> method in the class initializes the object. </li>
+<li>Arguments to <code>new</code> are passed as arguments to <code>init</code>.</li>
+<li>The return type of <code>init</code> must be a subtype of <code>error?</code>. 
+<ul>
+<li>If <code>init</code> returns <code>()</code>: The <code>new</code> returns the newly constructed object. </li>
+<li>If <code>init</code> returns an <code>error</code> : The <code>new</code> returns that error. </li>
+<li>If <code>init</code> does not specify a return type: 
+<ul>
+<li>the return type defaults to <code>()</code>.</li>
+<li>Then <code>new</code> will never return an error.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="sample-17"><a class="header" href="#sample-17">Sample</a></h4>
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./../../code/object.bal) -->
+<!-- The below code snippet is automatically added from ./../../code/object.bal -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+<h4 id="output-17"><a class="header" href="#output-17">Output</a></h4>
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./../../code/object.bash) -->
+<!-- The below code snippet is automatically added from ./../../code/object.bash -->
+<!-- MARKDOWN-AUTO-DOCS:END --><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="error"><a class="header" href="#error">error</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="other-types"><a class="header" href="#other-types">Other types</a></h1>
 <p>Following types do not add to the universe of values. They are just adding new ways to describe subsets of this universe. </p>
 <ul>
@@ -1291,7 +1339,7 @@ public function main() {
 <li>Langlib <code>lang.value</code> module contains functions that apply to multiple basic types.</li>
 <li>A variable of type any can be cast to a specific type using the <code>&lt; &gt;</code> symbol enclosure.</li>
 </ul>
-<h4 id="sample-17"><a class="header" href="#sample-17">Sample</a></h4>
+<h4 id="sample-18"><a class="header" href="#sample-18">Sample</a></h4>
 <pre><code class="language-go">import ballerina/io;
 
 public function main() {
@@ -1309,7 +1357,7 @@ public function main() {
     }
 }
 </code></pre>
-<h4 id="output-17"><a class="header" href="#output-17">Output</a></h4>
+<h4 id="output-18"><a class="header" href="#output-18">Output</a></h4>
 <pre><code>1.4
 x is float
 </code></pre>
@@ -1326,7 +1374,7 @@ x is float
 <li>The <code>==</code> and <code>!=</code> operators on anydata test for deep equality.</li>
 <li>The equality operation also takes care of cycles within anydata structure values.</li>
 </ul>
-<h4 id="sample-18"><a class="header" href="#sample-18">Sample</a></h4>
+<h4 id="sample-19"><a class="header" href="#sample-19">Sample</a></h4>
 <pre><code class="language-bal">import ballerina/io;
 public function main() {
     anydata[] fArr = [1.34, 3.43];
@@ -1334,7 +1382,7 @@ public function main() {
     io:println(f);
 }
 </code></pre>
-<h4 id="output-18"><a class="header" href="#output-18">Output</a></h4>
+<h4 id="output-19"><a class="header" href="#output-19">Output</a></h4>
 <pre><code>1.34
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="byte"><a class="header" href="#byte">byte</a></h1>
@@ -1356,7 +1404,7 @@ public function main() {
 <li>The  <code>is</code> operator is used to check whether the value belongs to a specific type.   The type will be narrowed with the use of the <code>is</code> operator. Narrowing occurs when Ballerina can deduce a more specific type for a value based on the structure of the code.</li>
 <li><code>T1|()</code> can be written as <code>T?</code> as well.</li>
 </ul>
-<h4 id="sample-19"><a class="header" href="#sample-19">Sample</a></h4>
+<h4 id="sample-20"><a class="header" href="#sample-20">Sample</a></h4>
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./../../code/union.bal) -->
 <!-- The below code snippet is automatically added from ./../../code/union.bal -->
 <pre><code class="language-bal">import ballerina/io;
@@ -1393,7 +1441,7 @@ public function main() {
 </code></pre>
 <!-- The below code snippet is automatically added from ./../../code/union.bal -->
 <!-- MARKDOWN-AUTO-DOCS:END -->
-<h4 id="output-19"><a class="header" href="#output-19">Output</a></h4>
+<h4 id="output-20"><a class="header" href="#output-20">Output</a></h4>
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./../../code/union.bash) -->
 <!-- The below code snippet is automatically added from ./../../code/union.bash -->
 <pre><code class="language-bash">union contains a string  value

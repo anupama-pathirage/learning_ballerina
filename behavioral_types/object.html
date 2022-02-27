@@ -146,7 +146,55 @@
 
                 <div id="content" class="content">
                     <main>
-                        
+                        <h1 id="object"><a class="header" href="#object">Object</a></h1>
+<h4 id="why-objects"><a class="header" href="#why-objects">Why Objects?</a></h4>
+<ul>
+<li>Object encapsulates data with functions that operate on the data</li>
+</ul>
+<h4 id="introduction"><a class="header" href="#introduction">Introduction</a></h4>
+<ul>
+<li>An object consists of named members, 
+<ul>
+<li>field -  stores a value</li>
+<li>method - a function that can be invoked on the object</li>
+</ul>
+</li>
+<li>When a method is invoked on an object, the function can access the object using the <code>self</code> variable.</li>
+<li>It is not possible for an object to have a field and a method with the same name.</li>
+<li>Need to use the <code>new</code> operator with a <code>class</code> to get an object. </li>
+<li>There are three visibility levels.
+<ul>
+<li>private - only visible within the object and its functions.</li>
+<li>public - visible to any module.</li>
+<li>protected - visible only within the same module.</li>
+</ul>
+</li>
+</ul>
+<h4 id="init-function"><a class="header" href="#init-function">Init Function</a></h4>
+<ul>
+<li>The <code>init</code> method in the class initializes the object. </li>
+<li>Arguments to <code>new</code> are passed as arguments to <code>init</code>.</li>
+<li>The return type of <code>init</code> must be a subtype of <code>error?</code>. 
+<ul>
+<li>If <code>init</code> returns <code>()</code>: The <code>new</code> returns the newly constructed object. </li>
+<li>If <code>init</code> returns an <code>error</code> : The <code>new</code> returns that error. </li>
+<li>If <code>init</code> does not specify a return type: 
+<ul>
+<li>the return type defaults to <code>()</code>.</li>
+<li>Then <code>new</code> will never return an error.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="sample"><a class="header" href="#sample">Sample</a></h4>
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./../../code/object.bal) -->
+<!-- The below code snippet is automatically added from ./../../code/object.bal -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+<h4 id="output"><a class="header" href="#output">Output</a></h4>
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./../../code/object.bash) -->
+<!-- The below code snippet is automatically added from ./../../code/object.bash -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
