@@ -149,7 +149,7 @@
                         <h1 id="object"><a class="header" href="#object">Object</a></h1>
 <h4 id="why-objects"><a class="header" href="#why-objects">Why Objects?</a></h4>
 <ul>
-<li>Object encapsulates data with functions that operate on the data</li>
+<li>Object encapsulates data with functions that operate on the data.</li>
 </ul>
 <h4 id="introduction"><a class="header" href="#introduction">Introduction</a></h4>
 <ul>
@@ -190,9 +190,51 @@
 <h4 id="sample"><a class="header" href="#sample">Sample</a></h4>
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./../../code/object.bal) -->
 <!-- The below code snippet is automatically added from ./../../code/object.bal -->
+<pre><code class="language-bal">import ballerina/io;
+
+class Customer {
+    private string firstName;
+    string lastName;
+    public int id;
+
+    function init(string firstName = &quot;A&quot;, string lastName = &quot;B&quot;, int id = 0) {
+        self.firstName = firstName;
+        self.lastName = lastName;
+        self.id = id;
+    }
+
+    function getFullName() returns string {
+        return self.firstName + &quot; &quot; + self.lastName;
+    }
+}
+
+public function main() {
+    //Calls init function with all parameters
+    Customer cust1 = new (&quot;Anupama&quot;, &quot;Pathirage&quot;, 10032);
+    string fullName = cust1.getFullName(); //Access  a method
+    io:println(fullName);
+
+    //Default values are used 
+    Customer cust2 = new;
+    int id = cust2.id; // Access a public id;
+    io:println(id);
+
+    //This inintialization is useful when the type of the object 
+    //cannot be determined based on nthe context(e.g., when the LHS is var or union)
+    var cust3 = new Customer(&quot;Bill&quot;, &quot;Gates&quot;, 10031);
+    string lastName = cust3.lastName;
+    io:println(lastName);
+}
+</code></pre>
+<!-- The below code snippet is automatically added from ./../../code/object.bal -->
 <!-- MARKDOWN-AUTO-DOCS:END -->
 <h4 id="output"><a class="header" href="#output">Output</a></h4>
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./../../code/object.bash) -->
+<!-- The below code snippet is automatically added from ./../../code/object.bash -->
+<pre><code class="language-bash">Anupama Pathirage
+0
+Gates
+</code></pre>
 <!-- The below code snippet is automatically added from ./../../code/object.bash -->
 <!-- MARKDOWN-AUTO-DOCS:END -->
                     </main>
