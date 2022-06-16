@@ -13,13 +13,12 @@ Let’s begin learning Ballerina.
 - [Hello World](hello_world.md) - A traditional Hello World program.
 - [Introduction to Type System](type_system.md) - An introduction to Ballerina type system.
     - [Type System Fundamentals](type_system/type_system_fundamentals.md)
-    - [Values and Types](type_system/values_and_types.md)
     - [LangLib Modules](type_system/langlib.md)
+- [Values and Types](values_and_types.md) -  Details on Ballerina type system.
 
 ## Use Cases
 
-- [Ballerina with GraphQL](https://github.com/anupama-pathirage/ballerina-scenarios/tree/main/ballerina-graphql-with-multiple-datasources) - Bookstore example using Ballerina with MySQL DB and Google Books API as datasources. 
-- [Ballerina with WebSocket](https://github.com/anupama-pathirage/ballerina-scenarios/tree/main/ballerina-websocket-for-realtime-stock-updates) - Stock data management service, exchange and client using WebSocket.  
+ - [Real-world usecases with Ballerina](usecases.md)
 
 
 ## Articles
