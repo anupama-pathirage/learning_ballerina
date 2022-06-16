@@ -11,7 +11,7 @@ Let’s begin learning Ballerina.
 - [Introduction to Ballerina](introduction.md) - An introduction to the language.
 
 - [Hello World](hello_world.md) - A traditional Hello World program.
-- [Type System](type_system.md) - An introduction to Ballerina type system.
+- [Introduction to Type System](type_system.md) - An introduction to Ballerina type system.
     - [Type System Fundamentals](type_system/type_system_fundamentals.md)
     - [Values and Types](type_system/values_and_types.md)
     - [LangLib Modules](type_system/langlib.md)
@@ -52,11 +52,6 @@ Let’s begin learning Ballerina.
     - [json](other_types/json.md)
     - [union](other_types/union.md)
 
-
-- [Conditional Statements](conditional_statements.md)
-    - [Ternary Conditional Operator](conditional_statements/ternary_conditional_operator.md)
-    - [If/else Statement](conditional_statements/if_else.md)
-    - [Swtich Statement](conditional_statements/stwitch.md)
 
 ## Use Cases
 

@@ -5,7 +5,7 @@
 - [Introduction to Ballerina](introduction.md)
 - [Hello World](hello_world.md)
 
-- [Type System](type_system.md)
+- [Introduction to Type System](type_system.md)
     - [Type System Fundamentals](type_system/type_system_fundamentals.md)
     - [Values and Types](type_system/values_and_types.md)
     - [LangLib Modules](type_system/langlib.md)
@@ -45,8 +45,3 @@
     - [byte](other_types/byte.md)
     - [json](other_types/json.md)
     - [union](other_types/union.md)
-
-- [Conditional Statements](conditional_statements.md)
-    - [Ternary Conditional Operator](conditional_statements/ternary_conditional_operator.md)
-    - [If/else Statement](conditional_statements/if_else.md)
-    - [Swtich Statement](conditional_statements/stwitch.md)
