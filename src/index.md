@@ -22,4 +22,4 @@ Let’s begin learning Ballerina.
 
 ## Articles
 
-- [Articles and Blogs on Ballerina][articles.md]
+- [Articles and Blogs on Ballerina](articles.md)
