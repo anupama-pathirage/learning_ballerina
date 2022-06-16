@@ -18,7 +18,7 @@ The information sources for the above operations are as follows.
 * Average rating and rating count - Retrieved from Google  Books API filtered using ISBN number of the book.  
 E.g.: https://www.googleapis.com/books/v1/volumes?q=isbn:9781101042472
 
-![GraphQL with Balleirna](img/Graphql-With-Ballerina.png)
+![GraphQL with Balleirna](../img/Graphql-With-Ballerina.png)
 
 ## Set up the Database
 
