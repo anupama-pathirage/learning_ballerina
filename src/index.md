@@ -23,3 +23,7 @@ Let’s begin learning Ballerina.
 ## Articles
 
 - [Articles and Blogs on Ballerina](articles.md)
+
+## Videos and Talks
+
+- [Videos and talks on Ballerina](videos.md)
