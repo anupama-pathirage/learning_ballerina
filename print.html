@@ -1512,7 +1512,144 @@ UK
 <li><a href="https://github.com/anupama-pathirage/ballerina-scenarios/tree/main/ballerina-graphql-with-multiple-datasources">Ballerina with GraphQL</a> - Bookstore example using Ballerina with MySQL DB and Google Books API as datasources. </li>
 <li><a href="https://github.com/anupama-pathirage/ballerina-scenarios/tree/main/ballerina-websocket-for-realtime-stock-updates">Ballerina with WebSocket</a> - Stock data management service, exchange and client using WebSocket. </li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ballerina-graphql-with-multiple-datasources"><a class="header" href="#ballerina-graphql-with-multiple-datasources">Ballerina GraphQL with multiple datasources</a></h1>
+<h2 id="source-code"><a class="header" href="#source-code">Source code</a></h2>
+<p>The full source code for the scenario can be found in <a href="https://github.com/anupama-pathirage/ballerina-scenarios/tree/main/ballerina-graphql-with-multiple-datasources">ballerina-scenarios repo.</a></p>
+<h2 id="sample-use-case"><a class="header" href="#sample-use-case">Sample use case</a></h2>
+<p>The data source to the GraphQL server can be anything such as a database, API, or service that holds data. Also, GraphQL can interact with any combination of data sources. In this use case, let’s see how we can implement a GraphQL server using the Ballerina language to expose data in the MySQL database and data retrieved via another API call.</p>
+<p>The MySQL database holds data about a book store, and it has book data and author data. Additional information related to  Books is retrieved using  Google Books API. Clients of the book store can do the following operations via the GraphQL server.</p>
+<ul>
+<li>Retrieve the details of all the books</li>
+<li>Retrieve the details of the book by providing the book name</li>
+<li>Add new books to the database</li>
+</ul>
+<p>The information sources for the above operations are as follows.</p>
+<ul>
+<li>Title, published year, ISBN number, author  name, author country  - Retrieved from DB</li>
+<li>Average rating and rating count - Retrieved from Google  Books API filtered using ISBN number of the book.<br />
+E.g.: https://www.googleapis.com/books/v1/volumes?q=isbn:9781101042472</li>
+</ul>
+<p><img src="usecases/img/Graphql-With-Ballerina.png" alt="GraphQL with Balleirna" /></p>
+<h2 id="set-up-the-database"><a class="header" href="#set-up-the-database">Set up the Database</a></h2>
+<p>Create the sample MySQL database and  populate data with the <a href="usecases/data.sql">data.sql</a> script as follows.</p>
+<pre><code>mysql -uroot -p &lt; /path/to/data.sql
+
+</code></pre>
+<h2 id="run-the-code"><a class="header" href="#run-the-code">Run the code</a></h2>
+<p>Execute <code>bal run</code> command  within the <code>bookstore</code> project folder.</p>
+<h2 id="test-the-service"><a class="header" href="#test-the-service">Test the service</a></h2>
+<p>To call the GraphQL server, we need to use a client. We can do this from the command line with <a href="https://curl.se/">curl</a> by sending an HTTP POST request to the endpoint, passing the GraphQL query as the query field in a JSON payload. If you prefer to use a graphical user interface, you can use clients such as <a href="https://github.com/graphql/graphiql">GraphiQL</a> or <a href="https://altair.sirmuel.design/#download">Altair</a>.</p>
+<p>For all the requests the endpoint is  : http://localhost:4000/bookstore</p>
+<h3 id="sample-request-1--get-the-titles-of-all-books"><a class="header" href="#sample-request-1--get-the-titles-of-all-books">Sample Request 1:  Get the titles of all books</a></h3>
+<p>GraphQL query: </p>
+<pre><code>{allBooks {title}}
+</code></pre>
+<p>Response: </p>
+<pre><code class="language-json">{
+ &quot;data&quot;: {
+   &quot;allBooks&quot;: [
+     { &quot;title&quot;: &quot;Pride and Prejudice&quot; },
+     { &quot;title&quot;: &quot;Sense and Sensibility&quot; },
+     { &quot;title&quot;: &quot;Emma&quot; },
+     { &quot;title&quot;: &quot;War and Peace&quot; },
+     { &quot;title&quot;: &quot;Anna Karenina&quot; }
+   ]
+ }
+}
+</code></pre>
+<p>CURL command  to request the same:
+curl -X POST -H &quot;Content-type: application/json&quot; -d '{ &quot;query&quot;: &quot;{allBooks {title}}&quot; }' 'http://localhost:4000/bookstore'</p>
+<h3 id="sample-request-2--get-more-details-of-all-books"><a class="header" href="#sample-request-2--get-more-details-of-all-books">Sample Request 2:  Get more details of all books</a></h3>
+<p>This is where the true power of GraphQL comes in. Users can request the exact information they need in the format they prefer without having different endpoints, but just by changing the query.</p>
+<p>GraphQL query : </p>
+<pre><code>{allBooks {title, author{name}, reviews{ratingsCount, averageRating}}}
+</code></pre>
+<p>Response :</p>
+<pre><code class="language-json">{
+ &quot;data&quot;: {
+   &quot;allBooks&quot;: [
+     {
+       &quot;title&quot;: &quot;Pride and Prejudice&quot;,
+       &quot;author&quot;: {
+         &quot;name&quot;: &quot;Jane Austen&quot;
+       },
+       &quot;reviews&quot;: {
+         &quot;ratingsCount&quot;: 1,
+         &quot;averageRating&quot;: 5
+       }
+     },
+     {
+       &quot;title&quot;: &quot;Sense and Sensibility&quot;,
+       &quot;author&quot;: {
+         &quot;name&quot;: &quot;Jane Austen&quot;
+       },
+       &quot;reviews&quot;: {
+         &quot;ratingsCount&quot;: 3,
+         &quot;averageRating&quot;: 4
+       }
+     },
+     {
+       &quot;title&quot;: &quot;Emma&quot;,
+       &quot;author&quot;: {
+         &quot;name&quot;: &quot;Jane Austen&quot;
+       },
+       &quot;reviews&quot;: {
+         &quot;ratingsCount&quot;: null,
+         &quot;averageRating&quot;: null
+       }
+     },
+     {
+       &quot;title&quot;: &quot;War and Peace&quot;,
+       &quot;author&quot;: {
+         &quot;name&quot;: &quot;Leo Tolstoy&quot;
+       },
+       &quot;reviews&quot;: {
+         &quot;ratingsCount&quot;: 5,
+         &quot;averageRating&quot;: 4
+       }
+     },
+     {
+       &quot;title&quot;: &quot;Anna Karenina&quot;,
+       &quot;author&quot;: {
+         &quot;name&quot;: &quot;Leo Tolstoy&quot;
+       },
+       &quot;reviews&quot;: {
+         &quot;ratingsCount&quot;: 1,
+         &quot;averageRating&quot;: 4
+       }
+     }
+   ]
+ }
+}
+</code></pre>
+<p>CURL command to send the same request:</p>
+<pre><code>curl -X POST -H &quot;Content-type: application/json&quot; -d '{ &quot;query&quot;: &quot;{allBooks {title, author{name}, reviews{ratingsCount, averageRating}}}&quot; }' 'http://localhost:4000/bookstore'
+</code></pre>
+<h3 id="sample-request-3--get-details-of-books-with--input-parameter"><a class="header" href="#sample-request-3--get-details-of-books-with--input-parameter">Sample Request 3:  Get details of books with  input parameter</a></h3>
+<p>GraphQL Query:</p>
+<pre><code>{bookByName(title: &quot;Emma&quot;) {title, published_year}}
+</code></pre>
+<p>Response:</p>
+<pre><code class="language-json">{ &quot;data&quot;: { &quot;bookByName&quot;: [{ &quot;title&quot;: &quot;Emma&quot;, &quot;published_year&quot;: 1815 }] } }
+</code></pre>
+<p>CURL Command to send the same request:</p>
+<pre><code>curl -X POST -H &quot;Content-type: application/json&quot; -d '{ &quot;query&quot;: &quot;{bookByName(title: \&quot;Emma\&quot;) {title, published_year}}&quot; }' 'http://localhost:4000/bookstore'
+</code></pre>
+<h3 id="sample-request-4-mutation-to-insert-data-into-the-database"><a class="header" href="#sample-request-4-mutation-to-insert-data-into-the-database">Sample Request 4: Mutation to insert data into the database</a></h3>
+<p>GraphQL Query:</p>
+<pre><code>mutation {addBook(authorName: &quot;J. K. Rowling&quot;, authorCountry: &quot;United Kingdom&quot;, title: &quot;Harry Potter&quot;, published_year: 2007, isbn: &quot;9781683836223&quot;)}
+</code></pre>
+<p>Response:</p>
+<pre><code class="language-json">{
+ &quot;data&quot;: {
+   &quot;addBook&quot;: 6
+ }
+}
+</code></pre>
+<p>CURL Command to send the same request:</p>
+<pre><code>curl -X POST -H &quot;Content-type: application/json&quot; -d '{ &quot;query&quot;: &quot;mutation {addBook(authorName: \&quot;J. K. Rowling\&quot;, authorCountry: \&quot;United Kingdom\&quot;, title: \&quot;Harry Potter\&quot;, published_year: 2007, isbn: \&quot;9781683836223\&quot;)}&quot; }' 'http://localhost:4000/bookstore'
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
