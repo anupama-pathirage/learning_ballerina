@@ -16,6 +16,10 @@ Let’s begin learning Ballerina.
     - [LangLib Modules](type_system/langlib.md)
 - [Values and Types](values_and_types.md) -  Details on Ballerina type system.
 
+## How-to Code snippets
+
+ - [Code snippets using Ballerina](how_to.md)
+
 ## Use Cases
 
  - [Real-world usecases with Ballerina](usecases.md)
