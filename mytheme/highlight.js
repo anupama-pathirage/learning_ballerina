@@ -4,8 +4,6 @@
   Copyright (c) 2006-2020, Ivan Sagalaev
 */
 
-twttr.widgets.load();
-
 var hljs = (function () {
   "use strict";
   function e(n) {
