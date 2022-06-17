@@ -43,6 +43,9 @@
         - [byte](other_types/byte.md)
         - [json](other_types/json.md)
         - [union](other_types/union.md)
+- [Ballerina How To Snippets](how_to.md)
+    - [Download a file from URL using Ballerina](how_to_snippets/download_file.md)
+
 - [Usecases](usecases.md)
     - [Ballerina GraphQL with multiple data sources](usecases/graphql_with_multiple_sources.md)
     - [WebSocket based stock updates with Ballerina](usecases/websocket_for_realtime_stock_updates.md)
